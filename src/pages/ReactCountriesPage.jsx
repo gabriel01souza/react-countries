@@ -73,8 +73,10 @@ export default function ReactCountriesPage() {
     return allCountries.filter(({ region }) => region === regionSelected);
   }
 
+  let classPage = filteredContries.length <= 3 ? "h-screen" : "";
+
   return (
-    <div className="bg-green-200 h-screen">
+    <div className={`bg-green-200 ${classPage}`} >
       <Header>react-countries</Header>
       <Main>
         <TextInput
